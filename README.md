@@ -5,7 +5,7 @@
 
 `NucleiScanner` is an automation tool that combines `Nuclei`, `Subfinder`, `Gau`, `Paramspider` and `httpx` functionality to enhance web application security testing. It uses `Subfinder` to collect subdomains, `Gau` to collect URLs by filtering unwanted extensions `ParamSpider` to identify potential entry points and `Nuclei Scanning templates` to scan for vulnerabilities. `NucleiScanner` streamlines the process, making it easier for security professionals and web developers to detect and address security risks efficiently. Download `NucleiScanner` to protect your web applications from vulnerabilities and attacks.
 
-**Note:** `Nuclei` + `Subfinder` + `Gau` + `Paramspider` + `httpx` = `NucleiScanner` <br><br>
+**Note:** `Nuclei` + `Subfinder` + `Gau` + `Paramspider` + `httpx` = `NucleiScanner` (will be improving) <br><br>
 **Important:** Make sure the tools `Nuclei`, `Subfinder`, `Gau`, `Paramspider` & `httpx` are installed on your machine and executing correctly to use the `NucleiScanner` without any issues.
 
 ### Tools included:
@@ -21,9 +21,6 @@
 
 ## Screenshot
 ![image](https://github.com/0xKayala/NucleiScanner/assets/16838353/a015b1f3-d8ef-4291-b7a5-7f6512904e83)
-
-
-## Output
 
 
 ## Usage
@@ -72,11 +69,6 @@ Here are a few examples of how to use NucleiScanner:
 ## Practical Demonstration:
 
 For a Practical Demonstration of the NucleiScanner tool see the below video 👇 <br>
-
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=0xKayala/NucleiScanner&type=Date)](https://star-history.com/#0xKayala/NucleiScanner&Date)
 
 ## Contributing
 
