@@ -3,12 +3,6 @@
   <br>
 </h1>
 
-<p align="center">
-<a href="https://github.com/0xKayala/NucleiScanner/issues"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
-<a href="https://github.com/0xKayala/NucleiScanner/releases"><img src="https://img.shields.io/github/v/release/0xkayala/NucleiScanner.svg"></a>
-<a href="https://twitter.com/0xKayala"><img src="https://img.shields.io/twitter/follow/0xKayala.svg?logo=twitter"></a>
-</p>
-
 `NucleiScanner` is an automation tool that combines `Nuclei`, `Subfinder`, `Gau`, `Paramspider` and `httpx` functionality to enhance web application security testing. It uses `Subfinder` to collect subdomains, `Gau` to collect URLs by filtering unwanted extensions `ParamSpider` to identify potential entry points and `Nuclei Scanning templates` to scan for vulnerabilities. `NucleiScanner` streamlines the process, making it easier for security professionals and web developers to detect and address security risks efficiently. Download `NucleiScanner` to protect your web applications from vulnerabilities and attacks.
 
 **Note:** `Nuclei` + `Subfinder` + `Gau` + `Paramspider` + `httpx` = `NucleiScanner` <br><br>
@@ -56,7 +50,7 @@ Options:
 To install `NucleiScanner`, follow these steps:
 
 ```
-git clone https://github.com/0xKayala/NucleiScanner.git && cd NucleiScanner && sudo chmod +x install.sh && ./install.sh && ns -h && cd ..
+git clone the file && cd NucleiScanner && sudo chmod +x install.sh && ./install.sh && ns -h && cd ..
 ```
 
 ## Examples:
@@ -86,26 +80,10 @@ For a Practical Demonstration of the NucleiScanner tool see the below video 👇
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to `NucleiScanner`, please follow these steps:
+Contributions are welcome! If you'd like to contribute to `RingBoy`, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch.
 3. Make your changes and commit them.
 4. Submit a pull request.
 
-Made by
-`Satya Prakash` | `0xKayala` \
-
-A `Security Researcher` and `Bug Hunter` \
-
-## Connect with me:
-<p align="left">
-<a href="https://twitter.com/0xkayala" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="0xkayala" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/0xkayala" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="0xkayala" height="30" width="40" /></a>
-<a href="https://instagram.com/0xkayala" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="0xkayala" height="30" width="40" /></a>
-<a href="https://medium.com/@0xkayala" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@0xkayala" height="30" width="40" /></a>
-<a href="https://www.youtube.com/@0xkayala" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="0xkayala" height="30" width="40" /></a>
-</p>
-
-## Support me:
-<p><a href="https://www.buymeacoffee.com/0xKayala"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="0xKayala" /></a></p><br><br>
