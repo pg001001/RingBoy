@@ -19,10 +19,6 @@
 ### Templates:
 [Nuclei Templates](https://github.com/projectdiscovery/nuclei-templates) `git clone https://github.com/projectdiscovery/nuclei-templates.git`
 
-## Screenshot
-![image](https://github.com/0xKayala/NucleiScanner/assets/16838353/a015b1f3-d8ef-4291-b7a5-7f6512904e83)
-
-
 ## Usage
 
 ```sh
