@@ -53,7 +53,6 @@ sudo cp ~/go/bin/nuclei /usr/local/bin/
 
 # install paramspider 
 pipx install git+https://github.com/devanshbatham/ParamSpider.git
-pipx install paramspider
 pipx ensurepath
 pipx completions
 
