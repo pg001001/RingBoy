@@ -53,7 +53,14 @@ sudo cp ~/go/bin/nuclei /usr/local/bin/
 
 # install paramspider 
 pipx install git+https://github.com/devanshbatham/ParamSpider.git
+pipx install paramspider
 pipx ensurepath
+pipx completions
+
+# install httpx
+echo "Installing httpx..."
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+sudo cp ~/go/bin/httpx /usr/bin/
 
 # Rename and move NucleiScanner.sh file to /usr/bin/nucleiscanner
 sudo mv NucleiScanner.sh /usr/bin/ns
@@ -61,10 +68,21 @@ sudo mv NucleiScanner.sh /usr/bin/ns
 # Make the NucleiScanner file executable
 sudo chmod u+x /usr/bin/ns
 
-# Remove the NucleiScanner folder from the home directory
-if [ -d "$home_dir/NucleiScanner" ]; then
-    echo "Removing NucleiScanner folder..."
-    rm -r "$home_dir/NucleiScanner"
-fi
+# Path to the .gau.toml file
+GAU_TOML_PATH="$HOME/.gau.toml"
 
-echo "NucleiScanner has been installed successfully! Now Enter the command 'ns' to run the tool."
+# Create or overwrite the .gau.toml file with the configuration
+echo "$CONFIG_CONTENT" > "$GAU_TOML_PATH"
+
+CONFIG_CONTENT=$(cat <<EOF
+FILTER_CODE: 404,301,302
+FILTER_MIME: text/css,image/jpeg,image/jpg,image/png,image/svg+xml,image/gif,image/tiff,image/webp,image/bmp,image/vnd,image/x-icon,image/vnd.microsoft.icon,font/ttf,font/woff,font/woff2,font/x-woff2,font/x-woff,font/otf,audio/mpeg,audio/wav,audio/webm,audio/aac,audio/ogg,audio/wav,audio/webm,video/mp4,video/mpeg,video/webm,video/ogg,video/mp2t,video/webm,video/x-msvideo,video/x-flv,application/font-woff,application/font-woff2,application/x-font-woff,application/x-font-woff2,application/vnd.ms-fontobject,application/font-sfnt,application/vnd.android.package-archive,binary/octet-stream,application/octet-stream,application/pdf,application/x-font-ttf,application/x-font-otf,video/webm,video/3gpp,application/font-ttf,audio/mp3,audio/x-wav,image/pjpeg,audio/basic,application/font-otf,application/x-ms-application,application/x-msdownload,video/x-ms-wmv,image/x-png,video/quicktime,image/x-ms-bmp,font/opentype,application/x-font-opentype,application/x-woff,audio/aiff
+FILTER_URL: .css,.jpg,.jpeg,.png,.svg,.img,.gif,.mp4,.flv,.ogv,.webm,.webp,.mov,.mp3,.m4a,.m4p,.scss,.tif,.tiff,.ttf,.otf,.woff,.woff2,.bmp,.ico,.eot,.htc,.rtf,.swf,.image,/image,/img,/css,/wp-json,/wp-content,/wp-includes,/theme,/audio,/captcha,/font,node_modules,/jquery,/bootstrap
+FILTER_KEYWORDS: admin,login,logon,signin,signup,register,registration,dash,portal,ftp,panel,.js,api,robots.txt,graph,gql,config,backup,debug,db,database,git,cgi-bin,swagger,zip,.rar,tar.gz,internal,jira,jenkins,confluence,atlassian,okta,corp,upload,delete,email,sql,create,edit,test,temp,cache,wsdl,log,payment,setting,mail,file,redirect,chat,billing,doc,trace,ftp,gateway,import,proxy,dev,stage,stg,uat,sonar.ci.,.cp.
+URLSCAN_API_KEY:
+VIRUSTOTAL_API_KEY:
+CONTINUE_RESPONSES_IF_PIPED: True
+WEBHOOK_DISCORD: YOUR_WEBHOOK
+DEFAULT_OUTPUT_DIR:
+EOF
+)

@@ -33,22 +33,22 @@ home_dir=$(eval echo ~"$USER")
 excluded_extentions="png,jpg,gif,jpeg,swf,woff,svg,pdf,css,webp,woff,woff2,eot,ttf,otf,mp4"
 
 # Check if subfinder is installed, if not, install it
-if ! command -v subfinder -up &> /dev/null; then
-    echo "Installing Subfinder..."
-    go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-fi
+# if ! command -v subfinder -up &> /dev/null; then
+#     echo "Installing Subfinder..."
+#     go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+# fi
 
 # Check if Gau is installed, if not, install it
-if ! command -v gau &> /dev/null; then
-    echo "Installing Gau..."
-    go install -v github.com/lc/gau/v2/cmd/gau@latest
-fi
+# if ! command -v gau &> /dev/null; then
+#     echo "Installing Gau..."
+#     go install -v github.com/lc/gau/v2/cmd/gau@latest
+# fi
 
 # Check if ParamSpider is already cloned and installed
-if [ ! -d "$home_dir/ParamSpider" ]; then
-    echo "Cloning ParamSpider..."
-    git clone https://github.com/0xKayala/ParamSpider "$home_dir/ParamSpider"
-fi
+# if [ ! -d "$home_dir/ParamSpider" ]; then
+#     echo "Cloning ParamSpider..."
+#     git clone https://github.com/0xKayala/ParamSpider "$home_dir/ParamSpider"
+# fi
 
 # Check if nuclei-templates is already cloned.
 if [ ! -d "$home_dir/nuclei-templates" ]; then
@@ -57,16 +57,16 @@ if [ ! -d "$home_dir/nuclei-templates" ]; then
 fi
 
 # Check if nuclei is installed, if not, install it
-if ! command -v nuclei -up &> /dev/null; then
-    echo "Installing Nuclei..."
-    go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
-fi
+# if ! command -v nuclei -up &> /dev/null; then
+#     echo "Installing Nuclei..."
+#     go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+# fi
 
 # Check if httpx is installed, if not, install it
-if ! command -v httpx -up &> /dev/null; then
-    echo "Installing httpx..."
-    go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-fi
+# if ! command -v httpx -up &> /dev/null; then
+#     echo "Installing httpx..."
+#     go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+# fi
 
 # Parse command line arguments
 while [[ $# -gt 0 ]]
