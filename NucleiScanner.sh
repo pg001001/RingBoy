@@ -114,11 +114,11 @@ fi
 # Step 3: Get the vulnerable parameters based on user input
 if [ -n "$domain" ]; then
     echo "Running ParamSpider on $domain"
-    paramspider -d "$domain" --exclude "$excluded_extentions" --level high --quiet -o "output/$domain.txt"
+    python3 /root/ParamSpider/paramspider.py -d "$domain" --exclude "$excluded_extentions" --level high --quiet -o "output/$domain.txt"
 elif [ -n "$filename" ]; then
     echo "Running ParamSpider on URLs from $filename"
     while IFS= read -r line; do
-        paramspider -d "$line" --exclude "$excluded_extentions" --level high --quiet -o "output/$line.txt"
+        python3 /root/ParamSpider/paramspider.py -d "$line" --exclude "$excluded_extentions" --level high --quiet -o "output/$line.txt"
         cat "output/$line.txt" >> "$output_file"  # Append to the combined output file
     done < "$filename"
 fi

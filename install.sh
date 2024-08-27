@@ -52,9 +52,15 @@ go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 sudo cp ~/go/bin/nuclei /usr/local/bin/
 
 # install paramspider 
-pipx install git+https://github.com/0xKayala/ParamSpider.git
-pipx ensurepath
-pipx completions
+sudo apt install python3-venv
+git clone https://github.com/0xKayala/ParamSpider.git
+cd ~/ParamSpider
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+source venv/bin/activate
+deactivate
+
 
 # install httpx
 echo "Installing httpx..."
