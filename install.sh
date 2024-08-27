@@ -52,9 +52,10 @@ go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 sudo cp ~/go/bin/nuclei /usr/local/bin/
 
 # install paramspider 
+cd /root/
 sudo apt install python3-venv
 git clone https://github.com/0xKayala/ParamSpider.git
-cd ~/ParamSpider
+cd /root/ParamSpider
 python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
