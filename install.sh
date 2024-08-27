@@ -52,7 +52,7 @@ go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 sudo cp ~/go/bin/nuclei /usr/local/bin/
 
 # install paramspider 
-pipx install git+https://github.com/devanshbatham/ParamSpider.git
+pipx install git+https://github.com/0xKayala/ParamSpider.git
 pipx ensurepath
 pipx completions
 
@@ -62,10 +62,9 @@ go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 sudo cp ~/go/bin/httpx /usr/bin/
 
 # Rename and move NucleiScanner.sh file to /usr/bin/nucleiscanner
-sudo mv NucleiScanner.sh /usr/bin/ns
-
 # Make the NucleiScanner file executable
-sudo chmod u+x /usr/bin/ns
+# sudo mv NucleiScanner.sh /usr/bin/ns
+# sudo chmod u+x /usr/bin/ns
 
 # Path to the .gau.toml file
 GAU_TOML_PATH="$HOME/.gau.toml"
